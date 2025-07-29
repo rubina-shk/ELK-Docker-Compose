@@ -1,0 +1,9 @@
+filebeat.inputs:
+-   type: log
+    enabled: true
+    paths:
+        - /mnt/logs/apim_metrics.log
+    include_lines: ['(apimMetrics):']
+output.logstash:
+# The Logstash hosts
+     hosts: ["logstash:5044"]
